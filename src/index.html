@@ -5,7 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Tech Skills</title>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "3-NvaxA_oygSaGLl4",
+      });
+   })();
+</script>
 </head>
 
 <body class="bg-[#3C0959]">
@@ -94,22 +106,94 @@
 
     <!-- Product section ends -->
 
+    <!-- contact form -->
+    
+    
+    <section class="text-gray-600 body-font relative">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="w-full h-auto flex flex-wrap flex-col items-center">
+            <p class="text-[#b20af2] font-bold text-3xl md:text-4xl text-center">Contact Us</p>
+            <div class="w-28 h-1 border-b-4 border-yellow-400 mt-2 rounded-full md:mt-4 mb-12"></div>
+        </div>
+        <div class="lg:w-1/2 md:w-2/3 mx-auto">
+          <div class="flex flex-wrap -m-2">
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="name" class="leading-7 text-sm text-[#fff]">Name</label>
+                <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+              <div class="relative">
+                <label for="name" class="leading-7 text-sm text-[#fff]">Phone No</label>
+                <input type="text" id="phone no" name="phone no" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+            </div>
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="email" class="leading-7 text-sm text-[#fff]">Email</label>
+                <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+              <div class="relative">
+                <label for="email" class="leading-7 text-sm text-[#fff]">Subject</label>
+                <input type="email" id="Subject" name="Subject" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+            </div>
+            <div class="p-2 w-full">
+              <div class="relative">
+                <label for="message" class="leading-7 text-sm text-[#fff]">Message</label>
+                <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+              </div>
+            </div>
+            <div class="p-2 w-full">
+              <button onclick="sendMail()" type="submit" class="flex mx-auto text-white bg-[#b20af2]  border-0 py-2 px-8 focus:outline-none hover:bg-[#5f0e7d] rounded text-lg duration-200 ease-in-out font-bold">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact form ends -->
+
+
     <!-- footer -->
 
-    <footer class="w-full bg-[#300640] px-4 text-white pt-8 flex flex-col md:flex-row flex-wrap justify-between md:px-12">
+    <footer class="w-full bg-[#300640] px-4 text-white pt-8 flex flex-col md:flex-row flex-wrap justify-between  md:px-12">
         <div>
-            <img class="w-40 h-20" src="../assets/asad_website_image__2_-removebg-preview.png" alt="">
+            <img class="w-48 h-20" src="../assets/asad_website_image__2_-removebg-preview.png" alt="">
             <p class="my-4">Email Us : opworrier@gmail.com</p>
             <img class="w-32 h-32" src="../assets/images-removebg-preview.png" alt="">
         </div>
         <div>
+            <h2 class="font-bold text-xl mt-4">Tech Skills</h2>
+            <div class="w-32 h-1 border-b-2 border-yellow-400 rounded-2xl"></div>
             <div>
                 <p>About Us</p>
                 <p>FAQ,s</p>
                 <p>Privacy Policy</p>
             </div>
         </div>
-    </footer>   
+        <div>
+            <h2 class="font-bold text-xl mt-4">Products</h2>
+            <div class="w-32 h-1 border-b-2 border-yellow-400 rounded-2xl"></div>
+            <div>
+                <p>Tech-Skills lab</p>
+                <p>Job portal</p>
+                <p>Experience Portal</p>
+                <p>Become an affiliate</p>
+                <p>Hall of fame</p>
+            </div>
+        </div>
+        <div>
+            <h2 class="font-bold text-xl mt-4">Links</h2>
+            <div class="w-32 h-1 border-b-2 border-yellow-400 rounded-2xl"></div>
+            <div>
+                <p>Discord Channel</p>
+                <p>Tech-Skills Youtube</p>
+                <p>Careers</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- footer ends -->
 
 
 </body>
