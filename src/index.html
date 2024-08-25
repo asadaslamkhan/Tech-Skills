@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <title>Tech Skills</title>
     <script src="index.js"></script>
     <script type="text/javascript"
@@ -23,17 +24,35 @@
 <body class="bg-[#3C0959]">
     <!-- Navbar -->
     <nav class="w-full h-14 bg-[#681299] flex justify-between px-4 md:px-4 items-center">
-        <div class="text-2xl text-[#300640] font-bold">Tech <span class="text-white">Skills</span></div>
-        <ul class="md:flex hidden font-semibold">
-            <li class="mx-[10px] cursor-pointer">Home</li>
-            <li class="mx-[10px] cursor-pointer">Services</li>
-            <li class="mx-[10px] cursor-pointer">About Us</li>
-            <li class="mx-[10px] cursor-pointer">Contact Us</li>
-        </ul>
-        <div class="hidden md:block px-2 py-2 bg-[#310342] text-white rounded-full font-bold cursor-pointer">
-            Login/Signup</div>
-        <div class="md:hidden">
-            <a class="text-5xl" href="#">&#8801;</a>
+        <a href="#" class="text-2xl text-[#b539db] font-bold" > Tech <span class="text-white">Skills</span></a>
+        <div id="nav-menu" class="md:flex hidden font-semibold"> 
+            <a href="#" class="mx-[10px] cursor-pointer text-[#fff] duration-200 ease-out hover:text-[#aca6ad]">Home</a>
+            <a href="#" class="mx-[10px] cursor-pointer text-[#fff] duration-200 ease-out hover:text-[#aca6ad]">Services</a>
+            <a href="#" class="mx-[10px] cursor-pointer text-[#fff] duration-200 ease-out hover:text-[#aca6ad]">About us</a>
+            <a href="#" class="mx-[10px] cursor-pointer text-[#fff] duration-200 ease-out hover:text-[#aca6ad]">Contact Us</a>
+        </div>
+        <button class="hidden md:block px-2 py-2 bg-[#310342] text-white rounded-full font-bold cursor-pointer hover:bg-[#cb7ed9] hover:text-black duration-500 ease-in-out">
+            Login/Signup</button>
+        <button class="md:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars text-black"></i>
+        </button>
+
+        <div id="nav-dialog" class="fixed z-10 md:hidden bg-[#681299] inset-0 p-3">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" class="text-2xl text-[#b539db] font-bold" > Tech <span class="text-white">Skills</span></a>
+                <button class="md:hidden" onclick="handleMenu()">
+                    <i class="fa-duotone fa-solid fa-xmark text-black"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+                <a href="" class="font-medium m-3 p-3 hover:bg-[#c583d6] block rounded-lg">Home</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-[#c583d6] block rounded-lg">Services</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-[#c583d6] block rounded-lg">About Us</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-[#c583d6] block rounded-lg">Contact Us</a>
+            </div>
+            <div class="h-[1px] bg-[#b539db]"></div>
+            <button class="mt-6 md:block px-2 py-2 bg-[#310342] text-white rounded-full font-bold cursor-pointer hover:bg-[#512f59]">
+                Login/Signup</button>
         </div>
     </nav>
     <!-- Navbar Ends -->
@@ -158,7 +177,7 @@
 
     <footer class="w-full bg-[#300640] px-4 text-white pt-8 flex flex-col md:flex-row flex-wrap justify-between  md:px-12">
         <div>
-            <img class="w-48 h-20" src="../assets/asad_website_image__2_-removebg-preview.png" alt="">
+            <img class="w-40 h-24" src="../assets/asad_website_image__2_-removebg-preview.png" alt="">
             <p class="my-4">Email Us : opworrier@gmail.com</p>
             <img class="w-32 h-32" src="../assets/images-removebg-preview.png" alt="">
         </div>
@@ -197,5 +216,5 @@
 
 
 </body>
-
+    <script src="hamburger.js"></script>
 </html>
